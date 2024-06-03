@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const getAllExercises = async () => {
   try {
-    const response = await axios.get(`https://codeshareserver-5.onrender.com/exercises/getAll`);
+    const response = await axios.get(`http://localhost:8000/exercises/getAll`);
     return response.data;
   } catch (error) {
     throw error;
@@ -11,9 +11,8 @@ export const getAllExercises = async () => {
 
 
 export const getExerciseById = async (id) => {
-  console.log("🚀 ~ getExerciseById ~ id:", id)
   try {
-    const response = await axios.get(`https://codeshareserver-5.onrender.com/exercises/${id}`);
+    const response = await axios.get(`http://localhost:8000/exercises/${id}`);
     return response.data;
   } catch (error) {
     throw error;
